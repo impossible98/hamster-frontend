@@ -6,6 +6,7 @@ import Spinner from '@/components/Common/spinner';
 const About = React.lazy(() => import('@/pages/About'));
 const Home = React.lazy(() => import('@/pages/Home'));
 const Login = React.lazy(() => import('@/pages/Login'));
+const NotFound = React.lazy(() => import('@/pages/NotFound'));
 const PageLayout = React.lazy(() => import('@/layouts'));
 
 function Router() {
@@ -19,6 +20,7 @@ function Router() {
             <Route path="" element={<Home />} />
             <Route path="about" element={<About />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </React.Suspense>
     </BrowserRouter>

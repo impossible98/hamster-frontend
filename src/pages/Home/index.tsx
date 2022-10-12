@@ -1,13 +1,18 @@
 // import third-party modules
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button, Grid, Input, PageHeader, Tabs } from '@arco-design/web-react';
 import type { RefInputType } from '@arco-design/web-react/es/Input/interface';
 // import local modules
+import { APP_NAME } from '@/config';
 import { BASE_SEARCH_URL } from '@/utils/constants';
 
 function Home() {
   const inputElement = useRef<RefInputType>(null);
   const [activeTab, setActiveTab] = useState('1');
+  // 页面标题
+  useEffect(() => {
+    document.title = `Home - ${APP_NAME}`;
+  }, []);
   // return
   return (
     <PageHeader title="Home">
