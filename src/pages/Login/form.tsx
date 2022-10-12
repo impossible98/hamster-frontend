@@ -55,7 +55,7 @@ function LoginForm() {
           <Form.Item>
             <Button
               style={{
-                height: '3rem',
+                borderRadius: '9999px',
                 width: '100%',
               }}
               type="primary"
@@ -68,8 +68,8 @@ function LoginForm() {
             <Form.Item>
               <Button
                 style={{
+                  borderRadius: '9999px',
                   color: 'var(--color-text-2)',
-                  height: '3rem',
                   width: '100%',
                 }}
                 type="text"

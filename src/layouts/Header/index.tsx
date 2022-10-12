@@ -3,6 +3,7 @@ import {
   Button,
   Dropdown,
   Grid,
+  Image,
   Layout,
   Menu,
   Space,
@@ -12,6 +13,8 @@ import { IconDown } from '@arco-design/web-react/icon';
 import { Logout, MenuFold, User } from '@icon-park/react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import local modules
+import logo from '@/assets/logo.svg';
 
 function Header() {
   // return
@@ -27,23 +30,49 @@ function Header() {
           height: '4rem',
         }}
       >
-        <Grid.Col span={8}>
-          <Button>
-            <MenuFold />
+        <Grid.Col
+          style={{
+            height: '4rem',
+          }}
+          span={8}
+        >
+          <Button
+            style={{
+              backgroundColor: 'var(--color-bg-1)',
+              marginTop: 'calc(4rem - 3rem)',
+            }}
+          >
+            <MenuFold size={24} />
           </Button>
+          <Image
+            style={{
+              marginTop: '-0.725rem',
+            }}
+            alt="logo"
+            preview={false}
+            src={logo}
+            width={32}
+          />
         </Grid.Col>
         <Grid.Col span={8}></Grid.Col>
-        <Grid.Col span={8}>
+        <Grid.Col
+          style={{
+            height: '4rem',
+          }}
+          span={8}
+        >
           <Space>
             <Dropdown
               droplist={
                 <Menu>
-                  <Menu.Item key="1">
-                    <Space>
-                      <User />
-                      <Typography.Text>个人中心</Typography.Text>
-                    </Space>
-                  </Menu.Item>
+                  <Link to={'account'}>
+                    <Menu.Item key="1">
+                      <Space>
+                        <User />
+                        <Typography.Text>个人中心</Typography.Text>
+                      </Space>
+                    </Menu.Item>
+                  </Link>
                   <Link replace={true} to={'login'}>
                     <Menu.Item key="2">
                       <Space>
@@ -55,12 +84,30 @@ function Header() {
                 </Menu>
               }
               position="bl"
+              trigger={['click', 'hover']}
             >
-              <Button type="text">
+              <Button
+                style={{
+                  backgroundColor: 'var(--color-bg-1)',
+                  marginTop: 'calc(4rem - 3rem)',
+                }}
+                type="text"
+              >
                 User
                 <IconDown />
               </Button>
             </Dropdown>
+            <Link to={'login'}>
+              <Button
+                style={{
+                  backgroundColor: 'var(--color-bg-1)',
+                  marginTop: 'calc(4rem - 3rem)',
+                }}
+                type="text"
+              >
+                Login
+              </Button>
+            </Link>
           </Space>
         </Grid.Col>
       </Grid.Row>
