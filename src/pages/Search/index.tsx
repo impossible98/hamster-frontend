@@ -17,13 +17,13 @@ export const data = [
     key: '1',
     name: '头条搜索',
     engine: 'https://so.toutiao.com/search?dvpf=pc&keyword=',
-    color: '#FF4D4F',
+    color: '#F04142',
   },
   {
     key: '2',
     name: '有道',
     engine: 'https://youdao.com/result?lang=en&word=',
-    color: '#1890FF',
+    color: '#FC001A',
   },
 ];
 
@@ -59,10 +59,10 @@ function Search() {
           width: '100%',
         }}
         title={
-          <>
+          <Space>
             <Button icon={<Edit />} shape="circle" type="text" />
             <Typography.Text> Edit search</Typography.Text>
-          </>
+          </Space>
         }
       >
         <Table

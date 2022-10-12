@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react';
 import { showRegister } from '@/config';
 
 function LoginForm() {
-  const formElement = useRef<FormInstance>();
+  const formElement = useRef<FormInstance>(null);
   const [loading, _setLoading] = useState<boolean>(false);
   const [rememberPassword, setRememberPassword] = useState(!!'');
   // return

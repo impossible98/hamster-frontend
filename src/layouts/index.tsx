@@ -1,11 +1,5 @@
 // import third-party modules
-import {
-  Button,
-  Layout,
-  Menu,
-  Space,
-  Typography,
-} from '@arco-design/web-react';
+import { Button, Layout, Menu, Typography } from '@arco-design/web-react';
 import { Home, Info, Search, Star, User } from '@icon-park/react';
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
@@ -13,7 +7,7 @@ import { Link, Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 
-function PageLayout() {
+const PageLayout: React.FC = () => {
   // return
   return (
     <Layout>
@@ -68,6 +62,6 @@ function PageLayout() {
       </Layout>
     </Layout>
   );
-}
+};
 
 export default PageLayout;

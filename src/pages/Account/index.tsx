@@ -10,11 +10,11 @@ import {
   Typography,
 } from '@arco-design/web-react';
 import type { RefInputType } from '@arco-design/web-react/es/Input/interface';
-import { Check, Close, Lock, User } from '@icon-park/react';
+import { Check, Close, Lock } from '@icon-park/react';
 // import local modules
 import { APP_NAME } from '@/config';
 
-function Account() {
+const Account: React.FC = () => {
   const pageTitle = 'Account';
   const inputElementNewPassword = useRef<RefInputType>(null);
   const inputElementConfirmPassword = useRef<RefInputType>(null);
@@ -79,6 +79,6 @@ function Account() {
       </Card>
     </PageHeader>
   );
-}
+};
 
 export default Account;

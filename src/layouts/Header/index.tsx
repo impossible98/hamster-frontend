@@ -68,6 +68,14 @@ function Header() {
                   <Link replace={true} to={'login'}>
                     <Menu.Item key="1">
                       <Space>
+                        <User />
+                        <Typography.Text>个人中心</Typography.Text>
+                      </Space>
+                    </Menu.Item>
+                  </Link>
+                  <Link replace={true} to={'login'}>
+                    <Menu.Item key="2">
+                      <Space>
                         <Logout />
                         <Typography.Text>登出</Typography.Text>
                       </Space>
@@ -89,17 +97,6 @@ function Header() {
                 <IconDown />
               </Button>
             </Dropdown>
-            <Link to={'login'}>
-              <Button
-                style={{
-                  backgroundColor: 'var(--color-bg-1)',
-                  marginTop: 'calc(4rem - 3rem)',
-                }}
-                type="text"
-              >
-                Login
-              </Button>
-            </Link>
           </Space>
         </Grid.Col>
       </Grid.Row>
