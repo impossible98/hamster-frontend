@@ -1,13 +1,13 @@
 // import third-party modules
-import { Layout, Menu } from '@arco-design/web-react';
-import { Home, Info } from '@icon-park/react';
+import { Button, Layout, Menu, Typography } from '@arco-design/web-react';
+import { Home, Info, Search, Star, User } from '@icon-park/react';
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 // import local modules
 import Header from './Header';
 import Footer from './Footer';
 
-function PageLayout() {
+const PageLayout: React.FC = () => {
   // return
   return (
     <Layout>
@@ -23,14 +23,32 @@ function PageLayout() {
           >
             <Link to={''}>
               <Menu.Item key="1">
-                <Home />
-                Home
+                <Button icon={<Home />} type="text" />
+                <Typography.Text> Home</Typography.Text>
+              </Menu.Item>
+            </Link>
+            <Link to={'/search'}>
+              <Menu.Item key="2">
+                <Button icon={<Search />} type="text" />
+                <Typography.Text> Search</Typography.Text>
+              </Menu.Item>
+            </Link>
+            <Link to={'/favourite'}>
+              <Menu.Item key="3">
+                <Button icon={<Star />} type="text" />
+                <Typography.Text> Favourite</Typography.Text>
+              </Menu.Item>
+            </Link>
+            <Link to={'/account'}>
+              <Menu.Item key="4">
+                <Button icon={<User />} type="text" />
+                <Typography.Text> Account</Typography.Text>
               </Menu.Item>
             </Link>
             <Link to={'/about'}>
-              <Menu.Item key="2">
-                <Info />
-                About
+              <Menu.Item key="5">
+                <Button icon={<Info />} type="text" />
+                <Typography.Text> About</Typography.Text>
               </Menu.Item>
             </Link>
           </Menu>
@@ -44,6 +62,6 @@ function PageLayout() {
       </Layout>
     </Layout>
   );
-}
+};
 
 export default PageLayout;

@@ -65,7 +65,7 @@ function Header() {
             <Dropdown
               droplist={
                 <Menu>
-                  <Link to={'account'}>
+                  <Link replace={true} to={'login'}>
                     <Menu.Item key="1">
                       <Space>
                         <User />
@@ -97,17 +97,6 @@ function Header() {
                 <IconDown />
               </Button>
             </Dropdown>
-            <Link to={'login'}>
-              <Button
-                style={{
-                  backgroundColor: 'var(--color-bg-1)',
-                  marginTop: 'calc(4rem - 3rem)',
-                }}
-                type="text"
-              >
-                Login
-              </Button>
-            </Link>
           </Space>
         </Grid.Col>
       </Grid.Row>

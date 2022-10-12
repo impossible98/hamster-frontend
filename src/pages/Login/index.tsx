@@ -7,7 +7,7 @@ import Footer from '@/layouts/Footer';
 import { APP_NAME } from '@/config';
 import LoginForm from './form';
 
-function Login() {
+const Login: React.FC = () => {
   // 页面标题
   useEffect(() => {
     document.title = `Login - ${APP_NAME}`;
@@ -22,6 +22,6 @@ function Login() {
       <Footer />
     </Layout>
   );
-}
+};
 
 export default Login;
