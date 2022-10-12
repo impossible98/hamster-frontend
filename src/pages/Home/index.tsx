@@ -1,10 +1,18 @@
 // import third-party modules
 import React, { useEffect, useRef, useState } from 'react';
-import { Button, Grid, Input, PageHeader, Tabs } from '@arco-design/web-react';
+import {
+  Button,
+  Divider,
+  Grid,
+  Input,
+  PageHeader,
+  Tabs,
+} from '@arco-design/web-react';
 import type { RefInputType } from '@arco-design/web-react/es/Input/interface';
 // import local modules
 import { APP_NAME } from '@/config';
 import { BASE_SEARCH_URL } from '@/utils/constants';
+import { data } from '@/pages/Search';
 
 function Home() {
   const inputElement = useRef<RefInputType>(null);
@@ -16,7 +24,7 @@ function Home() {
   // return
   return (
     <PageHeader title="Home">
-      <Grid.Row>
+      <Grid.Row gutter={[24, 16]}>
         <Grid.Col span={24}>
           <Tabs activeTab={activeTab} type="rounded" onChange={setActiveTab}>
             <Tabs.TabPane key="1" title="cn Bing">
@@ -33,6 +41,24 @@ function Home() {
                 }}
               />
             </Tabs.TabPane>
+            {data.map((item) => {
+              return (
+                <Tabs.TabPane key={item.key + 1} title={item.name}>
+                  <Input
+                    style={{
+                      borderRadius: '9999px',
+                      height: '40px',
+                    }}
+                    ref={inputElement}
+                    onPressEnter={(e) => {
+                      if (e.target.value) {
+                        window.open(`${item.engine}${e.target.value}`);
+                      }
+                    }}
+                  />
+                </Tabs.TabPane>
+              );
+            })}
           </Tabs>
         </Grid.Col>
         <Grid.Col span={24}>
@@ -53,6 +79,9 @@ function Home() {
           >
             Search
           </Button>
+        </Grid.Col>
+        <Grid.Col span={24}>
+          <Divider />
         </Grid.Col>
       </Grid.Row>
     </PageHeader>

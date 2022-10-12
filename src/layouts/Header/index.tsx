@@ -65,16 +65,8 @@ function Header() {
             <Dropdown
               droplist={
                 <Menu>
-                  <Link to={'account'}>
-                    <Menu.Item key="1">
-                      <Space>
-                        <User />
-                        <Typography.Text>个人中心</Typography.Text>
-                      </Space>
-                    </Menu.Item>
-                  </Link>
                   <Link replace={true} to={'login'}>
-                    <Menu.Item key="2">
+                    <Menu.Item key="1">
                       <Space>
                         <Logout />
                         <Typography.Text>登出</Typography.Text>

@@ -25,12 +25,7 @@ function Account() {
   // return
   return (
     <PageHeader
-      title={
-        <Space>
-          <User />
-          <Typography.Text>{pageTitle}</Typography.Text>
-        </Space>
-      }
+      title={<Typography.Title heading={2}>{pageTitle}</Typography.Title>}
     >
       <Card
         style={{
@@ -43,7 +38,14 @@ function Account() {
           </Space>
         }
       >
-        <Form autoComplete="off" layout="vertical">
+        <Form
+          style={{
+            maxWidth: '24rem',
+            minWidth: 'auto',
+          }}
+          autoComplete="off"
+          layout="vertical"
+        >
           <Form.Item label="Current password" rules={[{ required: true }]}>
             <Input.Password />
           </Form.Item>
