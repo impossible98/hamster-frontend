@@ -1,0 +1,38 @@
+{
+    "name": "hamster",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "build": "tsc && vite build",
+        "dev": "vite",
+        "fmt": "prettier --write .",
+        "lint": "eslint ./src/ --ext .ts,.tsx,.js,.jsx",
+        "prepare": "husky install",
+        "serve": "vite preview"
+    },
+    "dependencies": {
+        "@arco-design/web-react": "^2.0.0",
+        "@icon-park/react": "^1.0.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-router-dom": "^6.0.0"
+    },
+    "devDependencies": {
+        "@arco-plugins/vite-react": "^1.0.0",
+        "@arco-themes/react-arco-pro": "^0.0.7",
+        "@commitlint/cli": "^17.0.0",
+        "@commitlint/config-conventional": "^17.0.0",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "@typescript-eslint/eslint-plugin": "^5.40.0",
+        "@typescript-eslint/parser": "^5.40.0",
+        "@vitejs/plugin-react": "^1.0.0",
+        "eslint": "^8.0.0",
+        "eslint-plugin-react": "^7.31.10",
+        "husky": "^8.0.0",
+        "prettier": "^2.0.0",
+        "typescript": "^4.0.0",
+        "vite": "^3.0.0",
+        "vite-plugin-qrcode": "^0.2.0"
+    }
+}
