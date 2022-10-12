@@ -3,25 +3,21 @@ import React from 'react';
 import { Grid, Spin } from '@arco-design/web-react';
 
 function Spinner() {
+  // return
   return (
     <Grid.Row
       style={{
-        alignItems: 'center',
-        display: 'flex',
         height: '100vh',
-        margin: '0px',
-        justifyContent: 'center',
         width: '100vw',
-        textAlign: 'center',
       }}
     >
       <Grid.Col
         span={24}
         style={{
-          blockSize: '50vh',
-          display: 'grid',
-          inlineSize: '50vw',
-          placeItems: 'center',
+          position: 'relative',
+          left: '50%',
+          top: '50%',
+          transform: 'translate(-50%, -50%)',
         }}
       >
         <Spin dot />

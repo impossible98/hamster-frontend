@@ -4,3 +4,4 @@
 git add --all
 make lint
 make fmt
+git add --all
